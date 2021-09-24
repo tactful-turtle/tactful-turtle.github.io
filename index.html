@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/9a964c36f1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!--Navigation Bar-->
+    <nav class="navigation-bar">
+        <ul class="navigation-menu">
+            <li class="title">
+                <a href="/">A Generic Website</a>
+                <button class="toggle-navigation">
+                    <div class="top-bar"></div>
+                    <div class="mid-bar"></div>
+                    <div class="bot-bar"></div>
+                </button>
+            </li>
+            <li><a href="#docs">Docs</a></li>
+            <li><a href="#banner">Banner</a></li>
+            <li><a href="/">More Features coming soon!</a></li>
+        </ul>
+    </nav>
+
+    <div class="header" id="docs">
+        <h1 class="big-mode">1. Navbar</h1>
+        <div class="line"></div>
+        <p>A navigation bar helps the user quickly navigate around your website. A collapsible menu can be toggled to
+            view links to different areas of your website<br>The navigation bar displayed at the top of this website
+            scales nicely on both small and large screens.</p>
+    </div>
+
+    <div class="header">
+        <h1 class="big-mode">2. Accordion</h1>
+        <div class="line"></div>
+        <p>The accordion is an excellent way to display information in a compact manner.<br>The section headings can be
+            expanded or collapsed as the user sees fit.</p>
+    </div>
+
+    <!--Accordion-->
+    <div class="accordion">
+        <div class="panel">
+            <button class="panel-toggle">
+                Section 1
+                <div class="panel-toggle-icon"></div>
+            </button>
+            <div class="panel-info">
+                <p>Some text</p>
+            </div>
+        </div>
+        <div class="panel">
+            <button class="panel-toggle">
+                Section 2
+                <div class="panel-toggle-icon"></div>
+            </button>
+            <div class="panel-info">
+                <p>Some more text</p>
+            </div>
+        </div>
+        <div class="panel">
+            <button class="panel-toggle">
+                Section 3
+                <div class="panel-toggle-icon"></div>
+            </button>
+            <div class="panel-info">
+                <p>Even more text</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="header">
+                    <h1 class="big-mode">3. Slideshow</h1>
+                    <div class="line"></div>
+                    <p>A slideshow is an interesting and interactive way to present images to the viewer. The slides can
+                        be changed by clicking the "<" and ">" buttons to go back and forwards, respectively.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="slideshow">
+                    <div class="slide active">
+                        <img src="images/western_canada/canmore.jpg" alt="" class="picture">
+                        <div class="title-pill">
+                            <p>Canmore</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/western_canada/trail.jpg" alt="" class="picture">
+                        <div class="title-pill">
+                            <p>Black & White</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/western_canada/deer.jpg" alt="" class="picture">
+                        <div class="title-pill">
+                            <p>Deer</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/western_canada/rocks.jpg" alt="" class="picture">
+                        <div class="title-pill">
+                            <p>Rocks</p>
+                        </div>
+                    </div>
+                    <div class="slide-buttons">
+                        <button class="back">&#10094;</button>
+                        <button class="next">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="slideshow" style="width: 400px;">
+                    <div class="slide active">
+                        <img src="images/western_canada/waterfall.jpg" alt="" class="picture">
+                        <div class="title-pill">
+                            <p>Waterfall</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/western_canada/lake.jpg" alt="" class="picture">
+                        <div class="title-pill">
+                            <p>Lake</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/western_canada/mistaya.jpg" alt="" class="picture">
+                        <div class="title-pill">
+                            <p>Mistaya Canyon</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/western_canada/canyon.jpg" alt="" class="picture">
+                        <div class="title-pill">
+                            <p>Another Canyon</p>
+                        </div>
+                    </div>
+                    <div class="slide-buttons">
+                        <button class="back">&#10094;</button>
+                        <button class="next">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner" id="banner">
+        <h1 class="banner-header">4. Banners</h1>
+        <div class="banner-line"></div>
+        <p class="banner-text">Banners are a great way to catch the attention of the viewer</p>
+    </div>
+
+    <div class="header">
+        <h1 class="big-mode">5. Inputs</h1>
+        <div class="line"></div>
+        <p>Simple stylized inputs!</p>
+    </div>
+
+    <div class="field-input">
+        <i class="fas fa-user fa-2x icon"></i>
+        <input type="text" class="field" placeholder="Username">
+    </div>
+
+    <div class="field-input">
+        <i class="fas fa-envelope fa-2x icon"></i>
+        <input type="text" class="field" placeholder="Email">
+    </div>
+
+    <div class="field-input">
+        <i class="fas fa-key fa-2x icon"></i>
+        <input type="password" class="field" placeholder="Password">
+    </div>
+
+    <div class="modal" id="example">
+        <div class="modal-box">
+            <button class="modal-close" style="float: right; margin: 10px">
+                <i class="fas fa-times fa-2x"></i>
+            </button>
+        </div>
+    </div>
+
+    <button class="modal-toggle" id="example-toggle">Toggle Modal!</button>
+
+
+    <script src="jquery/jquery.js"></script>
+    <script src="index.js" async defer></script>
+</body>
+
+</html>
