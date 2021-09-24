@@ -36,9 +36,14 @@
     padding: 15px 30px;
     font-size: 30px;
 }
+@media (max-width: 400px) {
+    .navigation-menu li.title a {
+        max-width: 200px;
+    }
+}
 .navigation-menu li.title button{
     float: right;
-    margin: 20px 20px;
+    margin: 20px;
     border-style: none;
     cursor: pointer;
     background-color: #454545;
