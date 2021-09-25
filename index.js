@@ -1,5 +1,8 @@
 let displayNavigation = true;
 let periodic_scroll = true;
+let modal_open = false;
+
+const modalAnimationTime = 500;
 
 $(document).ready(function () {
 
@@ -37,36 +40,77 @@ $(document).ready(function () {
         }, 500);
     });
 
-    $('.field').focus(function() {
+    $('.field').focus(function () {
         $(this).addClass('selected');
         $(this).siblings('.icon').addClass('selected');
         $(this).parent().addClass('selected');
     });
 
-    $('.field').blur(function() {
+    $('.field').blur(function () {
         $(this).removeClass('selected');
         $(this).siblings('.icon').removeClass('selected');
         $(this).parent().removeClass('selected');
     });
 
-    $('.modal-toggle').click(function() {
+    $('.modal-toggle').click(function () {
+
         let id_str = ($(this).attr('id')).slice(0, -7);
-        console.log(id_str);
-        $(`#${id_str}`).show();
+
+        $(`#${id_str}`)
+            .children('.modal-box')
+            .animate(
+                { top: '20%', opacity: '1' },
+                modalAnimationTime
+            );
+        $(`#${id_str}`)
+            .show()
+            .animate(
+                { opacity: '1' },
+                modalAnimationTime,
+                function () {
+                    modal_open = true;
+                }
+            );
+        $("body").addClass("stop-scrolling");
     });
 
-    $('.modal-close').click(function() {
-        $(this).parents('.modal').hide();
+    $('.modal-close').click(function () {
+        if (!modal_open) return;
+        modal_open = false;
+        $(this).parent('.modal-box')
+            .animate(
+                { top: '0%', opacity: '0' },
+                modalAnimationTime
+            );
+        $(this).parents('.modal').animate(
+            { opacity: '0' },
+            modalAnimationTime,
+            function () {
+                $("body").removeClass("stop-scrolling");
+                $(this).hide();
+            });
     })
 
-    $(document).click(function(e) {
-        if (e.target.classList.contains('modal')) {
-            $(e.target).hide();
-            console.log('true');
+    $(document).click(function (e) {
+        if (e.target.classList.contains('modal') && modal_open) {
+            modal_open = false;
+            console.log("Yeehaw");
+            $(e.target).children('.modal-box')
+                .animate(
+                    { top: '0%', opacity: '0' },
+                    modalAnimationTime
+                );
+            $(e.target).animate(
+                { opacity: '0' },
+                modalAnimationTime,
+                function () {
+                    $("body").removeClass("stop-scrolling");
+                    $(this).hide();
+                });
         }
     })
 
-    $(document).scroll(function () {
+    $(document).scroll(function (e) {
 
         if (!periodic_scroll) return;
         periodic_scroll = false;

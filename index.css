@@ -251,7 +251,7 @@ div.slide:not(.active){
 .modal {
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 120%;
     background-color: rgba(90, 90, 90, 0.5);
     z-index: 2;
     display: none;
@@ -264,7 +264,12 @@ div.slide:not(.active){
     border-style: none;
     background-color: white;
     height: 200px;
-    top: 20%;
+    top: 0%;
+    opacity: 0;
+    padding: 15px;
+}
+.modal-box h1 {
+    font-size: 25px;
 }
 
 @media (min-width: 768px){
@@ -276,6 +281,19 @@ div.slide:not(.active){
     .modal-box {
         width: 80%;
     }
+}
+.modal-close {
+    background-color: white;
+    border-style: none;
+    float: right;
+}
+.modal-close i {
+    color: red;
+    background-color: white;
+    border-style: none;
+}
+.stop-scrolling {
+    overflow: hidden;
 }
 
 
@@ -301,6 +319,22 @@ h1.big-mode {
 
 .box {
     height: 100px;
+}
+
+.modal-toggle {
+    display: block;
+    margin: 10px 30px;
+    width: 200px;
+    border-style: none;
+    border-radius: 10px;
+    height: 50px;
+    background-color: #384a75;
+    color: white;
+    font-size: 20px; 
+}
+
+.modal-toggle:hover {
+    background-color: #5b77ba;
 }
 
 
