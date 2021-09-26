@@ -136,6 +136,12 @@ $(document).ready(function () {
             });
         }, 250);
     });
+
+    $(".parallax-box").scroll(function(e) {
+        const scrollVal = e.target.scrollTop;
+        const scrollRate = scrollVal * 0.5;
+        $('.parallax-picture').css('transform', `translate3D(0px, ${scrollRate}px, 0px)`);
+    });
 });
 
 const toggleDisabled = function (val, selector) {

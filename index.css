@@ -296,8 +296,32 @@ div.slide:not(.active){
     overflow: hidden;
 }
 
+/* Parallax Styling */ 
+.parallax-box {
+    box-sizing: border-box;
+    width: 90%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 500px;
+    border: 2px solid rgb(54, 54, 54);
+    margin: 20px auto;
+    position: relative;
+}
 
+.parallax-picture {
+    width: 1347px;
+}
 
+.parallax-text {
+    position: absolute;
+    width: 100%;
+    padding: 30px;
+    background-color: rgba(46, 46, 46, 0.808);
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+ 
 /* Website Styling */
 
 .header {
